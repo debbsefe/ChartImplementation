@@ -1,0 +1,1078 @@
+{
+  "config": {
+      "data": "assets",
+      "data_points": 24,
+      "interval": "hour",
+      "symbol": "'BTC','XRP','BNB','LTC'",
+      "time_series_indicators": "open,high,low,close,volume"
+  },
+  "data": [
+      {
+          "id": 6,
+          "name": "Binance Coin",
+          "symbol": "BNB",
+          "price": 555.352063,
+          "price_btc": 0.01023470580670168,
+          "market_cap": 85820582397,
+          "percent_change_24h": -6.57,
+          "percent_change_7d": 2.45,
+          "percent_change_30d": 117.36,
+          "volume_24h": 10021652348.73,
+          "max_supply": "170533652",
+          "timeSeries": [
+              {
+                  "open": 595.99587,
+                  "high": 598.828399,
+                  "low": 582.142053,
+                  "close": 592.412753,
+                  "volume": 572717104,
+                  "time": 1618992000
+              },
+              {
+                  "open": 594.406753,
+                  "high": 598.922981,
+                  "low": 590.344798,
+                  "close": 593.76077,
+                  "volume": 391356367,
+                  "time": 1618995600
+              },
+              {
+                  "open": 592.207114,
+                  "high": 592.297332,
+                  "low": 567.859916,
+                  "close": 574.133485,
+                  "volume": 643444194,
+                  "time": 1618999200
+              },
+              {
+                  "open": 572.762335,
+                  "high": 578.667117,
+                  "low": 558.958776,
+                  "close": 567.030939,
+                  "volume": 639791615,
+                  "time": 1619002800
+              },
+              {
+                  "open": 567.295284,
+                  "high": 590.2907,
+                  "low": 561.147167,
+                  "close": 588.070633,
+                  "volume": 658719110,
+                  "time": 1619006400
+              },
+              {
+                  "open": 588.234552,
+                  "high": 594.13311,
+                  "low": 581.963688,
+                  "close": 584.90804,
+                  "volume": 458556439,
+                  "time": 1619010000
+              },
+              {
+                  "open": 585.520168,
+                  "high": 589.644431,
+                  "low": 574.472631,
+                  "close": 584.979641,
+                  "volume": 471821973,
+                  "time": 1619013600
+              },
+              {
+                  "open": 584.767994,
+                  "high": 585.576246,
+                  "low": 575.236864,
+                  "close": 583.933225,
+                  "volume": 381079537,
+                  "time": 1619017200
+              },
+              {
+                  "open": 583.55502,
+                  "high": 589.035111,
+                  "low": 575.699242,
+                  "close": 580.629835,
+                  "volume": 396038455,
+                  "time": 1619020800
+              },
+              {
+                  "open": 581.65486,
+                  "high": 582.870968,
+                  "low": 571.634503,
+                  "close": 574.613533,
+                  "volume": 322360094,
+                  "time": 1619024400
+              },
+              {
+                  "open": 576.92627,
+                  "high": 579.34003,
+                  "low": 568.20615,
+                  "close": 574.170479,
+                  "volume": 323202029,
+                  "time": 1619028000
+              },
+              {
+                  "open": 575.89739,
+                  "high": 581.202479,
+                  "low": 570.525212,
+                  "close": 576.281685,
+                  "volume": 263114636,
+                  "time": 1619031600
+              },
+              {
+                  "open": 578.654114,
+                  "high": 578.945562,
+                  "low": 562.337975,
+                  "close": 568.668117,
+                  "volume": 409460323,
+                  "time": 1619035200
+              },
+              {
+                  "open": 570.342105,
+                  "high": 572.24058,
+                  "low": 564.986992,
+                  "close": 566.600062,
+                  "volume": 324288787,
+                  "time": 1619038800
+              },
+              {
+                  "open": 562.029241,
+                  "high": 570.029269,
+                  "low": 549.647028,
+                  "close": 553.803347,
+                  "volume": 450462169,
+                  "time": 1619042400
+              },
+              {
+                  "open": 553.476901,
+                  "high": 559.006064,
+                  "low": 544.197849,
+                  "close": 550.737341,
+                  "volume": 456460387,
+                  "time": 1619046000
+              },
+              {
+                  "open": 548.07562,
+                  "high": 554.070261,
+                  "low": 534.611027,
+                  "close": 550.70463,
+                  "volume": 529648710,
+                  "time": 1619049600
+              },
+              {
+                  "open": 551.754598,
+                  "high": 568.258257,
+                  "low": 550.721072,
+                  "close": 554.10035,
+                  "volume": 445106371,
+                  "time": 1619053200
+              },
+              {
+                  "open": 552.858863,
+                  "high": 558.47855,
+                  "low": 536.544181,
+                  "close": 555.64536,
+                  "volume": 707614060,
+                  "time": 1619056800
+              },
+              {
+                  "open": 555.386044,
+                  "high": 560.074782,
+                  "low": 539.440411,
+                  "close": 543.769555,
+                  "volume": 406615926,
+                  "time": 1619060400
+              },
+              {
+                  "open": 544.885138,
+                  "high": 556.36067,
+                  "low": 543.422794,
+                  "close": 554.270844,
+                  "volume": 354450043,
+                  "time": 1619064000
+              },
+              {
+                  "open": 555.490668,
+                  "high": 566.591239,
+                  "low": 553.035191,
+                  "close": 565.800864,
+                  "volume": 369517991,
+                  "time": 1619067600
+              },
+              {
+                  "open": 566.417814,
+                  "high": 570.10074,
+                  "low": 558.955237,
+                  "close": 560.895779,
+                  "volume": 365799832,
+                  "time": 1619071200
+              },
+              {
+                  "open": 561.768171,
+                  "high": 564.854064,
+                  "low": 556.19327,
+                  "close": 559.277593,
+                  "volume": 239048487,
+                  "time": 1619074800
+              }
+            
+          ],
+          "social_dominance_calc_24h_previous": 0,
+          "social_contributors_calc_24h_previous": 15041,
+          "url_shares_calc_24h_previous": 3568,
+          "tweet_spam_calc_24h_previous": 15878,
+          "news_calc_24h_previous": 12,
+          "average_sentiment_calc_24h_previous": 3.7,
+          "social_score_calc_24h_previous": 24981547,
+          "social_volume_calc_24h_previous": 16129,
+          "alt_rank_30d_calc_24h_previous": 6,
+          "alt_rank_calc_24h_previous": 36,
+          "asset_id": 6,
+          "time": 1619078400,
+          "open": 561.768171,
+          "high": 564.854064,
+          "low": 556.19327,
+          "volume": 239048487,
+          "url_shares": 134,
+          "unique_url_shares": 24,
+          "reddit_posts": 1,
+          "reddit_posts_score": 1,
+          "reddit_comments": 1,
+          "reddit_comments_score": 1,
+          "tweets": 655,
+          "tweet_spam": 439,
+          "tweet_followers": 1274659,
+          "tweet_quotes": 4,
+          "tweet_retweets": 64,
+          "tweet_replies": 17,
+          "tweet_favorites": 250,
+          "tweet_sentiment1": 4,
+          "tweet_sentiment2": 39,
+          "tweet_sentiment3": 54,
+          "tweet_sentiment4": 543,
+          "tweet_sentiment5": 15,
+          "tweet_sentiment_impact1": 2617,
+          "tweet_sentiment_impact2": 87201,
+          "tweet_sentiment_impact3": 83532,
+          "tweet_sentiment_impact4": 977077,
+          "tweet_sentiment_impact5": 124567,
+          "social_score": 1275128,
+          "average_sentiment": 3.8,
+          "sentiment_absolute": 3,
+          "sentiment_relative": 93,
+          "price_score": 3,
+          "social_impact_score": 3,
+          "correlation_rank": 2.9,
+          "galaxy_score": 63.5,
+          "volatility": 0.03596143,
+          "alt_rank": 112,
+          "alt_rank_30d": 6,
+          "market_cap_rank": 3,
+          "percent_change_24h_rank": 1379,
+          "volume_24h_rank": 7,
+          "social_volume_24h_rank": 8,
+          "social_score_24h_rank": 6,
+          "social_contributors": 296,
+          "social_volume": 681,
+          "social_volume_global": 46478,
+          "social_dominance": 1.4652093463574165,
+          "market_cap_global": 2097630496403,
+          "market_dominance": 4.117617642340283,
+          "news": 1,
+          "tags": "erc20",
+          "close": 555.352063
+      },
+      {
+          "id": 1,
+          "name": "Bitcoin",
+          "symbol": "BTC",
+          "price": 54261.653786,
+          "price_btc": 1,
+          "market_cap": 1014048568651,
+          "percent_change_24h": -2.83,
+          "percent_change_7d": -13.63,
+          "percent_change_30d": 0.76,
+          "volume_24h": 66481473033.18,
+          "max_supply": "21000000",
+          "timeSeries": [
+              {
+                  "open": 55566.147857,
+                  "high": 55813.295754,
+                  "low": 55229.338868,
+                  "close": 55705.089799,
+                  "volume": 2849213495,
+                  "time": 1618992000
+              },
+              {
+                  "open": 55841.25903,
+                  "high": 55986.554522,
+                  "low": 55799.512088,
+                  "close": 55952.518427,
+                  "volume": 2276260802,
+                  "time": 1618995600
+              },
+              {
+                  "open": 55626.018026,
+                  "high": 55626.018026,
+                  "low": 55175.300733,
+                  "close": 55214.470485,
+                  "volume": 2878806584,
+                  "time": 1618999200
+              },
+              {
+                  "open": 55159.771703,
+                  "high": 55225.209331,
+                  "low": 54823.841929,
+                  "close": 54823.841929,
+                  "volume": 3347936694,
+                  "time": 1619002800
+              },
+              {
+                  "open": 55344.627761,
+                  "high": 55573.306989,
+                  "low": 55180.876916,
+                  "close": 55552.258723,
+                  "volume": 3476613014,
+                  "time": 1619006400
+              },
+              {
+                  "open": 55692.335493,
+                  "high": 55759.380223,
+                  "low": 55668.297793,
+                  "close": 55713.006382,
+                  "volume": 2669757825,
+                  "time": 1619010000
+              },
+              {
+                  "open": 55956.609479,
+                  "high": 56331.707836,
+                  "low": 55789.009093,
+                  "close": 56287.820807,
+                  "volume": 3187046995,
+                  "time": 1619013600
+              },
+              {
+                  "open": 56298.725272,
+                  "high": 56350.313842,
+                  "low": 56179.5102,
+                  "close": 56250.171572,
+                  "volume": 3023073321,
+                  "time": 1619017200
+              },
+              {
+                  "open": 56165.405761,
+                  "high": 56186.477344,
+                  "low": 55808.780799,
+                  "close": 55857.886413,
+                  "volume": 2831166538,
+                  "time": 1619020800
+              },
+              {
+                  "open": 55855.942018,
+                  "high": 55855.942018,
+                  "low": 55691.296255,
+                  "close": 55691.296255,
+                  "volume": 2167977377,
+                  "time": 1619024400
+              },
+              {
+                  "open": 55605.060397,
+                  "high": 55605.705622,
+                  "low": 55374.938769,
+                  "close": 55460.526677,
+                  "volume": 2205825597,
+                  "time": 1619028000
+              },
+              {
+                  "open": 55690.603687,
+                  "high": 55787.213424,
+                  "low": 55655.931691,
+                  "close": 55655.931691,
+                  "volume": 2136411916,
+                  "time": 1619031600
+              },
+              {
+                  "open": 55401.260938,
+                  "high": 55401.260938,
+                  "low": 55042.117421,
+                  "close": 55110.69376,
+                  "volume": 2582440585,
+                  "time": 1619035200
+              },
+              {
+                  "open": 54935.168055,
+                  "high": 55065.443595,
+                  "low": 54935.168055,
+                  "close": 54950.114279,
+                  "volume": 2324260739,
+                  "time": 1619038800
+              },
+              {
+                  "open": 54813.278687,
+                  "high": 54916.735885,
+                  "low": 54055.331866,
+                  "close": 54151.993492,
+                  "volume": 3393457357,
+                  "time": 1619042400
+              },
+              {
+                  "open": 54121.54519,
+                  "high": 54329.738288,
+                  "low": 53889.568779,
+                  "close": 53943.432994,
+                  "volume": 3023158589,
+                  "time": 1619046000
+              },
+              {
+                  "open": 54192.934486,
+                  "high": 54228.686686,
+                  "low": 53868.773863,
+                  "close": 54163.757322,
+                  "volume": 4147435332,
+                  "time": 1619049600
+              },
+              {
+                  "open": 54153.882118,
+                  "high": 54485.491598,
+                  "low": 54088.691672,
+                  "close": 54088.691672,
+                  "volume": 2795481297,
+                  "time": 1619053200
+              },
+              {
+                  "open": 54045.166658,
+                  "high": 54045.166658,
+                  "low": 52899.326372,
+                  "close": 53883.285893,
+                  "volume": 5165186464,
+                  "time": 1619056800
+              },
+              {
+                  "open": 53817.597581,
+                  "high": 54063.711521,
+                  "low": 53515.269566,
+                  "close": 53633.173069,
+                  "volume": 3414591357,
+                  "time": 1619060400
+              },
+              {
+                  "open": 53969.370492,
+                  "high": 54472.986201,
+                  "low": 53969.370492,
+                  "close": 54439.299221,
+                  "volume": 2932745356,
+                  "time": 1619064000
+              },
+              {
+                  "open": 54571.422858,
+                  "high": 54759.420232,
+                  "low": 54423.389115,
+                  "close": 54639.327051,
+                  "volume": 2497575941,
+                  "time": 1619067600
+              },
+              {
+                  "open": 54632.934353,
+                  "high": 54932.549083,
+                  "low": 54583.475276,
+                  "close": 54643.218594,
+                  "volume": 2395996263,
+                  "time": 1619071200
+              },
+              {
+                  "open": 54695.995964,
+                  "high": 54743.544611,
+                  "low": 54458.947061,
+                  "close": 54458.947061,
+                  "volume": 1385169453,
+                  "time": 1619074800
+              }
+          ],
+          "social_dominance_calc_24h_previous": 0,
+          "social_contributors_calc_24h_previous": 139449,
+          "url_shares_calc_24h_previous": 45307,
+          "tweet_spam_calc_24h_previous": 122466,
+          "news_calc_24h_previous": 431,
+          "average_sentiment_calc_24h_previous": 3.6,
+          "social_score_calc_24h_previous": 1163080819,
+          "social_volume_calc_24h_previous": 230222,
+          "alt_rank_30d_calc_24h_previous": 87,
+          "alt_rank_calc_24h_previous": 57,
+          "asset_id": 1,
+          "time": 1619078400,
+          "open": 54695.995964,
+          "high": 54743.544611,
+          "low": 54458.947061,
+          "volume": 1385169453,
+          "url_shares": 1894,
+          "unique_url_shares": 1074,
+          "reddit_posts": 52,
+          "reddit_posts_score": 96,
+          "reddit_comments": 80,
+          "reddit_comments_score": 92,
+          "tweets": 8760,
+          "tweet_spam": 4902,
+          "tweet_followers": 31606318,
+          "tweet_quotes": 38,
+          "tweet_retweets": 843,
+          "tweet_replies": 319,
+          "tweet_favorites": 2731,
+          "tweet_sentiment1": 353,
+          "tweet_sentiment2": 946,
+          "tweet_sentiment3": 1070,
+          "tweet_sentiment4": 5994,
+          "tweet_sentiment5": 397,
+          "tweet_sentiment_impact1": 2093984,
+          "tweet_sentiment_impact2": 5365071,
+          "tweet_sentiment_impact3": 2937134,
+          "tweet_sentiment_impact4": 17944548,
+          "tweet_sentiment_impact5": 3269512,
+          "social_score": 31612143,
+          "average_sentiment": 3.6,
+          "sentiment_absolute": 3,
+          "sentiment_relative": 83,
+          "news": 8,
+          "price_score": 3.1,
+          "social_impact_score": 3.8,
+          "correlation_rank": 2.4,
+          "galaxy_score": 64.5,
+          "volatility": 0.01610621,
+          "alt_rank": 56,
+          "alt_rank_30d": 87,
+          "market_cap_rank": 1,
+          "percent_change_24h_rank": 1053,
+          "volume_24h_rank": 3,
+          "social_volume_24h_rank": 2,
+          "social_score_24h_rank": 1,
+          "social_contributors": 2980,
+          "social_volume": 9842,
+          "social_volume_global": 46478,
+          "social_dominance": 21.17560996600542,
+          "market_cap_global": 2097630496403,
+          "market_dominance": 48.444294216333205,
+          "medium": 2,
+          "youtube": 1,
+          "tags": "",
+          "close": 54261.653786
+      },
+      {
+          "id": 4,
+          "name": "Litecoin",
+          "symbol": "LTC",
+          "price": 266.788696,
+          "price_btc": 0.004916707797084224,
+          "market_cap": 17808789640,
+          "percent_change_24h": 0.99,
+          "percent_change_7d": -6.59,
+          "percent_change_30d": 43.95,
+          "volume_24h": 9674142989.98,
+          "max_supply": "84000000",
+          "timeSeries": [
+              {
+                  "open": 262.004964,
+                  "high": 265.732532,
+                  "low": 257.527791,
+                  "close": 263.737035,
+                  "volume": 484191710,
+                  "time": 1618992000
+              },
+              {
+                  "open": 264.161192,
+                  "high": 266.018809,
+                  "low": 261.726786,
+                  "close": 264.677993,
+                  "volume": 324390342,
+                  "time": 1618995600
+              },
+              {
+                  "open": 263.74579,
+                  "high": 264.032872,
+                  "low": 254.917477,
+                  "close": 256.150659,
+                  "volume": 433567487,
+                  "time": 1618999200
+              },
+              {
+                  "open": 255.962756,
+                  "high": 258.526836,
+                  "low": 252.323667,
+                  "close": 256.02788,
+                  "volume": 425167499,
+                  "time": 1619002800
+              },
+              {
+                  "open": 256.006888,
+                  "high": 267.470353,
+                  "low": 254.301433,
+                  "close": 266.085043,
+                  "volume": 549874410,
+                  "time": 1619006400
+              },
+              {
+                  "open": 266.440303,
+                  "high": 267.563315,
+                  "low": 264.056194,
+                  "close": 265.778832,
+                  "volume": 392157059,
+                  "time": 1619010000
+              },
+              {
+                  "open": 266.093044,
+                  "high": 272.097077,
+                  "low": 261.85739,
+                  "close": 270.77552,
+                  "volume": 431944306,
+                  "time": 1619013600
+              },
+              {
+                  "open": 270.800585,
+                  "high": 277.119443,
+                  "low": 270.579524,
+                  "close": 275.42836,
+                  "volume": 605216222,
+                  "time": 1619017200
+              },
+              {
+                  "open": 275.294529,
+                  "high": 277.908557,
+                  "low": 270.860777,
+                  "close": 271.994907,
+                  "volume": 470308251,
+                  "time": 1619020800
+              },
+              {
+                  "open": 272.197165,
+                  "high": 274.222583,
+                  "low": 268.832586,
+                  "close": 272.548588,
+                  "volume": 341759341,
+                  "time": 1619024400
+              },
+              {
+                  "open": 272.177491,
+                  "high": 272.811666,
+                  "low": 265.943604,
+                  "close": 268.88297,
+                  "volume": 368995303,
+                  "time": 1619028000
+              },
+              {
+                  "open": 269.201588,
+                  "high": 278.114599,
+                  "low": 268.56829,
+                  "close": 276.497005,
+                  "volume": 416159699,
+                  "time": 1619031600
+              },
+              {
+                  "open": 275.799689,
+                  "high": 276.227545,
+                  "low": 264.116784,
+                  "close": 266.206818,
+                  "volume": 526524434,
+                  "time": 1619035200
+              },
+              {
+                  "open": 266.773379,
+                  "high": 270.378905,
+                  "low": 263.169328,
+                  "close": 264.702752,
+                  "volume": 324308282,
+                  "time": 1619038800
+              },
+              {
+                  "open": 263.490077,
+                  "high": 267.980936,
+                  "low": 256.470091,
+                  "close": 259.964508,
+                  "volume": 523656706,
+                  "time": 1619042400
+              },
+              {
+                  "open": 259.932582,
+                  "high": 262.317662,
+                  "low": 256.613896,
+                  "close": 259.068011,
+                  "volume": 484699323,
+                  "time": 1619046000
+              },
+              {
+                  "open": 258.789019,
+                  "high": 261.672411,
+                  "low": 253.810429,
+                  "close": 260.279493,
+                  "volume": 590733945,
+                  "time": 1619049600
+              },
+              {
+                  "open": 260.88665,
+                  "high": 265.550868,
+                  "low": 257.488469,
+                  "close": 257.967157,
+                  "volume": 352577297,
+                  "time": 1619053200
+              },
+              {
+                  "open": 257.169237,
+                  "high": 262.677488,
+                  "low": 252.828085,
+                  "close": 259.770631,
+                  "volume": 568554053,
+                  "time": 1619056800
+              },
+              {
+                  "open": 260.178869,
+                  "high": 264.614061,
+                  "low": 256.948312,
+                  "close": 258.903845,
+                  "volume": 376646301,
+                  "time": 1619060400
+              },
+              {
+                  "open": 259.64073,
+                  "high": 265.312338,
+                  "low": 258.506164,
+                  "close": 263.774564,
+                  "volume": 345656226,
+                  "time": 1619064000
+              },
+              {
+                  "open": 264.194125,
+                  "high": 268.410688,
+                  "low": 262.740668,
+                  "close": 267.774354,
+                  "volume": 333390019,
+                  "time": 1619067600
+              },
+              {
+                  "open": 267.950541,
+                  "high": 270.077721,
+                  "low": 265.128389,
+                  "close": 265.656896,
+                  "volume": 332810285,
+                  "time": 1619071200
+              },
+              {
+                  "open": 266.49657,
+                  "high": 270.034269,
+                  "low": 265.018487,
+                  "close": 269.41327,
+                  "volume": 146134182,
+                  "time": 1619074800
+              }
+          ],
+          "asset_id": 4,
+          "time": 1619078400,
+          "open": 266.49657,
+          "high": 270.034269,
+          "low": 265.018487,
+          "volume": 146134182,
+          "url_shares": 47,
+          "unique_url_shares": 22,
+          "reddit_posts": 1,
+          "reddit_posts_score": 1,
+          "reddit_comments": 4,
+          "reddit_comments_score": 3,
+          "tweets": 139,
+          "tweet_spam": 64,
+          "tweet_followers": 301189,
+          "tweet_quotes": 1,
+          "tweet_retweets": 17,
+          "tweet_replies": 2,
+          "tweet_favorites": 47,
+          "tweet_sentiment1": 3,
+          "tweet_sentiment2": 6,
+          "tweet_sentiment3": 4,
+          "tweet_sentiment4": 123,
+          "tweet_sentiment5": 3,
+          "tweet_sentiment_impact1": 9006,
+          "tweet_sentiment_impact2": 2105,
+          "tweet_sentiment_impact3": 1347,
+          "tweet_sentiment_impact4": 287899,
+          "tweet_sentiment_impact5": 899,
+          "social_score": 301303,
+          "average_sentiment": 3.8,
+          "sentiment_absolute": 3,
+          "sentiment_relative": 93,
+          "news": 1,
+          "price_score": 3.2,
+          "social_impact_score": 3,
+          "correlation_rank": 3.2,
+          "galaxy_score": 66,
+          "volatility": 0.02017015,
+          "alt_rank": 16,
+          "alt_rank_30d": 27,
+          "market_cap_rank": 10,
+          "percent_change_24h_rank": 548,
+          "volume_24h_rank": 9,
+          "social_volume_24h_rank": 19,
+          "social_score_24h_rank": 12,
+          "social_contributors": 62,
+          "social_volume": 163,
+          "social_volume_global": 46478,
+          "social_dominance": 0.3507035586729205,
+          "market_cap_global": 2097630496403,
+          "market_dominance": 0.8523550923129317,
+          "tags": "",
+          "close": 266.788696
+      },
+      {
+          "id": 3,
+          "name": "XRP",
+          "symbol": "XRP",
+          "price": 1.326907,
+          "price_btc": 0.000024453854009769,
+          "market_cap": 61054800036,
+          "percent_change_24h": -5.61,
+          "percent_change_7d": -25.25,
+          "percent_change_30d": 141.93,
+          "volume_24h": 15212640802.18,
+          "max_supply": "100000000000",
+          "timeSeries": [
+              {
+                  "open": 1.431951,
+                  "high": 1.438284,
+                  "low": 1.391055,
+                  "close": 1.406691,
+                  "volume": 896942775,
+                  "time": 1618992000
+              },
+              {
+                  "open": 1.405803,
+                  "high": 1.413759,
+                  "low": 1.393465,
+                  "close": 1.402573,
+                  "volume": 589456375,
+                  "time": 1618995600
+              },
+              {
+                  "open": 1.403556,
+                  "high": 1.404848,
+                  "low": 1.333326,
+                  "close": 1.350325,
+                  "volume": 977347030,
+                  "time": 1618999200
+              },
+              {
+                  "open": 1.333152,
+                  "high": 1.356416,
+                  "low": 1.295713,
+                  "close": 1.321501,
+                  "volume": 884880013,
+                  "time": 1619002800
+              },
+              {
+                  "open": 1.338021,
+                  "high": 1.393969,
+                  "low": 1.322478,
+                  "close": 1.389553,
+                  "volume": 950536433,
+                  "time": 1619006400
+              },
+              {
+                  "open": 1.387754,
+                  "high": 1.404273,
+                  "low": 1.372837,
+                  "close": 1.396125,
+                  "volume": 679640487,
+                  "time": 1619010000
+              },
+              {
+                  "open": 1.381838,
+                  "high": 1.397358,
+                  "low": 1.350251,
+                  "close": 1.391272,
+                  "volume": 667824680,
+                  "time": 1619013600
+              },
+              {
+                  "open": 1.407794,
+                  "high": 1.438983,
+                  "low": 1.393141,
+                  "close": 1.422437,
+                  "volume": 751392919,
+                  "time": 1619017200
+              },
+              {
+                  "open": 1.414993,
+                  "high": 1.431139,
+                  "low": 1.385423,
+                  "close": 1.391095,
+                  "volume": 683451543,
+                  "time": 1619020800
+              },
+              {
+                  "open": 1.385739,
+                  "high": 1.39144,
+                  "low": 1.370924,
+                  "close": 1.3719,
+                  "volume": 493692558,
+                  "time": 1619024400
+              },
+              {
+                  "open": 1.374332,
+                  "high": 1.383579,
+                  "low": 1.360834,
+                  "close": 1.369065,
+                  "volume": 477446695,
+                  "time": 1619028000
+              },
+              {
+                  "open": 1.370215,
+                  "high": 1.394854,
+                  "low": 1.368511,
+                  "close": 1.392519,
+                  "volume": 409884464,
+                  "time": 1619031600
+              },
+              {
+                  "open": 1.390969,
+                  "high": 1.391316,
+                  "low": 1.339027,
+                  "close": 1.355947,
+                  "volume": 618364084,
+                  "time": 1619035200
+              },
+              {
+                  "open": 1.354516,
+                  "high": 1.365536,
+                  "low": 1.344674,
+                  "close": 1.345455,
+                  "volume": 452147101,
+                  "time": 1619038800
+              },
+              {
+                  "open": 1.343628,
+                  "high": 1.362222,
+                  "low": 1.30302,
+                  "close": 1.319536,
+                  "volume": 658664481,
+                  "time": 1619042400
+              },
+              {
+                  "open": 1.331705,
+                  "high": 1.344735,
+                  "low": 1.303529,
+                  "close": 1.316578,
+                  "volume": 799106091,
+                  "time": 1619046000
+              },
+              {
+                  "open": 1.309909,
+                  "high": 1.33691,
+                  "low": 1.283656,
+                  "close": 1.33246,
+                  "volume": 846594121,
+                  "time": 1619049600
+              },
+              {
+                  "open": 1.346243,
+                  "high": 1.371905,
+                  "low": 1.33412,
+                  "close": 1.346144,
+                  "volume": 708771722,
+                  "time": 1619053200
+              },
+              {
+                  "open": 1.322771,
+                  "high": 1.331165,
+                  "low": 1.290291,
+                  "close": 1.318968,
+                  "volume": 910746920,
+                  "time": 1619056800
+              },
+              {
+                  "open": 1.330987,
+                  "high": 1.347849,
+                  "low": 1.305073,
+                  "close": 1.315545,
+                  "volume": 714447126,
+                  "time": 1619060400
+              },
+              {
+                  "open": 1.316697,
+                  "high": 1.347865,
+                  "low": 1.313525,
+                  "close": 1.337807,
+                  "volume": 600461317,
+                  "time": 1619064000
+              },
+              {
+                  "open": 1.331117,
+                  "high": 1.352987,
+                  "low": 1.326853,
+                  "close": 1.346348,
+                  "volume": 574321594,
+                  "time": 1619067600
+              },
+              {
+                  "open": 1.346365,
+                  "high": 1.358559,
+                  "low": 1.334823,
+                  "close": 1.337171,
+                  "volume": 531984893,
+                  "time": 1619071200
+              },
+              {
+                  "open": 1.329291,
+                  "high": 1.337243,
+                  "low": 1.318135,
+                  "close": 1.325841,
+                  "volume": 228350393,
+                  "time": 1619074800
+              }
+          ],
+          "asset_id": 3,
+          "time": 1619078400,
+          "open": 1.329291,
+          "high": 1.337243,
+          "low": 1.318135,
+          "volume": 228350393,
+          "url_shares": 27,
+          "unique_url_shares": 16,
+          "reddit_posts": 1,
+          "reddit_posts_score": 0,
+          "reddit_comments": 2,
+          "reddit_comments_score": 2,
+          "tweets": 237,
+          "tweet_spam": 109,
+          "tweet_followers": 227958,
+          "tweet_quotes": 1,
+          "tweet_retweets": 22,
+          "tweet_replies": 7,
+          "tweet_favorites": 68,
+          "tweet_sentiment1": 1,
+          "tweet_sentiment2": 26,
+          "tweet_sentiment3": 39,
+          "tweet_sentiment4": 165,
+          "tweet_sentiment5": 6,
+          "tweet_sentiment_impact1": 1267,
+          "tweet_sentiment_impact2": 60589,
+          "tweet_sentiment_impact3": 16856,
+          "tweet_sentiment_impact4": 109598,
+          "tweet_sentiment_impact5": 39746,
+          "social_score": 228083,
+          "average_sentiment": 3.6,
+          "sentiment_absolute": 3,
+          "sentiment_relative": 86,
+          "news": 1,
+          "price_score": 5,
+          "social_impact_score": 4,
+          "correlation_rank": 2.8,
+          "galaxy_score": 77,
+          "volatility": 0.03170792,
+          "alt_rank": 101,
+          "alt_rank_30d": 2,
+          "market_cap_rank": 4,
+          "percent_change_24h_rank": 1316,
+          "volume_24h_rank": 5,
+          "social_volume_24h_rank": 6,
+          "social_score_24h_rank": 10,
+          "social_contributors": 103,
+          "social_volume": 253,
+          "social_volume_global": 46478,
+          "social_dominance": 0.544343560394165,
+          "market_cap_global": 2097630496403,
+          "market_dominance": 2.9206743665796555,
+          "tags": "",
+          "close": 1.326907
+      }
+  ]
+}
