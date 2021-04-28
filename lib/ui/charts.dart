@@ -253,12 +253,17 @@ class CryptoChartPainter extends CustomPainter {
   final Paint _paint;
   final Color gain;
   final bool callNotifier;
+  final double strokeWidth;
 
   CryptoChartPainter(
-      {this.timeSeries, this.isGain, this.gain, this.callNotifier})
+      {@required this.timeSeries,
+      @required this.isGain,
+      @required this.gain,
+      this.strokeWidth,
+      @required this.callNotifier})
       : _paint = Paint()
           ..color = callNotifier ? gain : isGain
-          ..strokeWidth = 2;
+          ..strokeWidth = strokeWidth ?? 2;
   @override
   void paint(Canvas canvas, Size size) {
     if (timeSeries == null) {

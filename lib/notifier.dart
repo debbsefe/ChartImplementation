@@ -24,7 +24,6 @@ class AppNotifier extends ChangeNotifier {
 
   Future<CryptoAssetsData> readJsonData(String filename) async {
     _cryptoAssetsData = null;
-    notifyListeners();
     final CryptoAssetsData cryptoAssetsData = await readJson(filename);
 
     _cryptoAssetsData = cryptoAssetsData;

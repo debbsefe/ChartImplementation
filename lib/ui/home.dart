@@ -22,13 +22,14 @@ class _HomeState extends State<Home> {
   Future<void> _fetchData() async {
     _cryptoAssetsData =
         await context.read<AppNotifier>().readJsonData('24_hour_interval.json');
-    setState(() {});
+    if (mounted) setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     // CryptoAssetsData _cryptoAssetsData =
     //     context.watch<AppNotifier>().cryptoAssetsData;
+
     return SafeArea(
       child: Scaffold(
           backgroundColor: Theme.of(context).primaryColor,
@@ -131,8 +132,10 @@ class _HomeState extends State<Home> {
                     Column(
                       children:
                           _cryptoAssetsData.data.asMap().entries.map((entry) {
-                        var e = entry.value;
+                        Datum e = entry.value;
+
                         return DashboardTile(
+                          data: e,
                           onTap: () {
                             Navigator.push(
                                 context,
@@ -160,7 +163,7 @@ class _HomeState extends State<Home> {
 
 class DashboardTile extends StatelessWidget {
   final String title, subtitle, trailing, image, currentPrice, percentage;
-
+  final Datum data;
   final Color percentageColor;
 
   final VoidCallback onTap;
@@ -173,7 +176,8 @@ class DashboardTile extends StatelessWidget {
       @required this.title,
       @required this.subtitle,
       this.trailing,
-      @required this.image});
+      @required this.image,
+      this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -202,7 +206,17 @@ class DashboardTile extends StatelessWidget {
                 ),
               ],
             ),
-            //Image.asset(trailing),
+            Container(
+                height: 50,
+                width: 100,
+                child: CustomPaint(
+                    size: Size.fromWidth(30),
+                    painter: CryptoChartPainter(
+                        strokeWidth: 1,
+                        callNotifier: false,
+                        gain: percentageColor,
+                        isGain: percentageColor,
+                        timeSeries: data.timeSeries))),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
