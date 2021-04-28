@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
               Icon(Icons.search),
               SizedBox(width: 10),
               Icon(Icons.scanner),
-              SizedBox(width: 10)
+              SizedBox(width: 20)
             ],
           ),
           body: ClipRRect(
@@ -72,6 +72,9 @@ class _HomeState extends State<Home> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     'Markets',
                     style: TextStyle(
@@ -126,7 +129,7 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 35,
                   ),
                   if (_cryptoAssetsData != null)
                     Column(
@@ -184,7 +187,7 @@ class DashboardTile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.only(bottom: 25),
+        padding: const EdgeInsets.only(bottom: 35),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -194,7 +197,7 @@ class DashboardTile extends StatelessWidget {
                   image,
                   height: 30,
                 ),
-                SizedBox(width: 10.0),
+                SizedBox(width: 20.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -239,11 +242,15 @@ class DashboardTile extends StatelessWidget {
 String handleImageAsset(String name) {
   switch (name) {
     case 'BTC':
-      return 'assets/images/btc_ic.png';
+      return 'assets/images/btc.png';
     case 'LTC':
-      return 'assets/images/litecoin.png';
+      return 'assets/images/ltc.png';
+    case 'XRP':
+      return 'assets/images/xrp.png';
+    case 'BNB':
+      return 'assets/images/bnb.png';
       break;
     default:
-      return 'assets/images/btc_ic.png';
+      return 'assets/images/btc.png';
   }
 }
