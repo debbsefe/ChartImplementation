@@ -1,7 +1,7 @@
-import 'package:candlestick_implementation/model/crypto_asset_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../model/crypto_asset_model.dart';
 import '../notifier.dart';
 import 'charts.dart';
 
@@ -11,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  CryptoAssetsData _cryptoAssetsData;
+  CryptoAssetsData? _cryptoAssetsData;
   @override
   void initState() {
     super.initState();
@@ -35,11 +35,11 @@ class _HomeState extends State<Home> {
           backgroundColor: Theme.of(context).primaryColor,
           appBar: AppBar(
             elevation: 0,
-            leading: Icon(Icons.person_rounded),
+            leading: const Icon(Icons.person_rounded),
             title: RichText(
               text: TextSpan(
                   text: 'Binance ',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                   ]),
             ),
             centerTitle: true,
-            actions: [
+            actions: const [
               Icon(Icons.search),
               SizedBox(width: 10),
               Icon(Icons.scanner),
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
             ],
           ),
           body: ClipRRect(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(50),
               topRight: Radius.circular(50),
             ),
@@ -72,17 +72,17 @@ class _HomeState extends State<Home> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     'Markets',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -92,19 +92,19 @@ class _HomeState extends State<Home> {
                           vertical: 8,
                           horizontal: 14,
                         ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.grey,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
-                        child: Text('All'),
+                        child: const Text('All'),
                       ),
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Container(
                         padding: const EdgeInsets.symmetric(
                           vertical: 8,
                           horizontal: 14,
                         ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.grey,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
@@ -114,28 +114,28 @@ class _HomeState extends State<Home> {
                           size: 14,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         padding: const EdgeInsets.symmetric(
                           vertical: 8,
                           horizontal: 14,
                         ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.grey,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
-                        child: Text('Market Cap'),
+                        child: const Text('Market Cap'),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 35,
                   ),
                   if (_cryptoAssetsData != null)
                     Column(
                       children:
-                          _cryptoAssetsData.data.asMap().entries.map((entry) {
-                        Datum e = entry.value;
+                          _cryptoAssetsData!.data!.asMap().entries.map((entry) {
+                        final Datum e = entry.value;
 
                         return DashboardTile(
                           data: e,
@@ -147,7 +147,7 @@ class _HomeState extends State<Home> {
                                         data: entry.value, index: entry.key)));
                           },
                           percentageColor:
-                              e.open > e.close ? Colors.red : Colors.green,
+                              e.open! > e.close! ? Colors.red : Colors.green,
                           currentPrice: e.price.toString(),
                           title: e.symbol,
                           subtitle: e.name,
@@ -165,21 +165,21 @@ class _HomeState extends State<Home> {
 }
 
 class DashboardTile extends StatelessWidget {
-  final String title, subtitle, trailing, image, currentPrice, percentage;
-  final Datum data;
+  final String? title, subtitle, trailing, image, currentPrice, percentage;
+  final Datum? data;
   final Color percentageColor;
 
   final VoidCallback onTap;
 
-  DashboardTile(
-      {@required this.onTap,
-      @required this.percentageColor,
-      @required this.currentPrice,
-      @required this.percentage,
-      @required this.title,
-      @required this.subtitle,
+  const DashboardTile(
+      {required this.onTap,
+      required this.percentageColor,
+      required this.currentPrice,
+      required this.percentage,
+      required this.title,
+      required this.subtitle,
       this.trailing,
-      @required this.image,
+      required this.image,
       this.data});
 
   @override
@@ -194,42 +194,43 @@ class DashboardTile extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  image,
+                  image!,
                   height: 30,
                 ),
-                SizedBox(width: 20.0),
+                const SizedBox(width: 20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: TextStyle(color: Colors.white)),
-                    SizedBox(height: 5.0),
-                    Text(subtitle,
+                    Text(title!, style: const TextStyle(color: Colors.white)),
+                    const SizedBox(height: 5),
+                    Text(subtitle!,
                         style: TextStyle(color: Colors.white.withOpacity(0.5))),
                   ],
                 ),
               ],
             ),
-            Container(
+            SizedBox(
                 height: 50,
                 width: 100,
                 child: CustomPaint(
-                    size: Size.fromWidth(30),
+                    size: const Size.fromWidth(30),
                     painter: CryptoChartPainter(
                         strokeWidth: 1,
                         callNotifier: false,
                         gain: percentageColor,
                         isGain: percentageColor,
-                        timeSeries: data.timeSeries))),
+                        timeSeries: data!.timeSeries))),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text('\$$currentPrice', style: TextStyle(color: Colors.white)),
+                Text('\$$currentPrice',
+                    style: const TextStyle(color: Colors.white)),
                 Text(
                     percentageColor == Colors.green
                         ? '+$percentage%'
                         : '$percentage%',
                     style: TextStyle(color: percentageColor)),
-                SizedBox(height: 2.0),
+                const SizedBox(height: 2),
               ],
             ),
           ],
@@ -239,7 +240,7 @@ class DashboardTile extends StatelessWidget {
   }
 }
 
-String handleImageAsset(String name) {
+String handleImageAsset(String? name) {
   switch (name) {
     case 'BTC':
       return 'assets/images/btc.png';
@@ -249,7 +250,6 @@ String handleImageAsset(String name) {
       return 'assets/images/xrp.png';
     case 'BNB':
       return 'assets/images/bnb.png';
-      break;
     default:
       return 'assets/images/btc.png';
   }

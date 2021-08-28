@@ -1,0 +1,23 @@
+include: package:very_good_analysis/analysis_options.yaml
+analyzer:
+  errors:
+    import_of_legacy_library_into_null_safe: ignore
+    public_member_api_docs: ignore
+    avoid_dynamic_calls: ignore
+    overridden_fields: ignore
+    annotate_overrides: ignore
+    omit_local_variable_types: ignore
+    argument_type_not_assignable: ignore
+    prefer_single_quotes: ignore
+    implicit_dynamic_map_literal: ignore
+    implicit_dynamic_method: ignore
+    implicit_dynamic_parameter: ignore
+    implicit_dynamic_type: ignore
+    sort_constructors_first: ignore
+    always_use_package_imports: ignore
+    use_key_in_widget_constructors: ignore
+    sort_pub_dependencies: ignore
+
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"

@@ -4,17 +4,17 @@ import 'json_reader.dart';
 import 'model/crypto_asset_model.dart';
 
 class AppNotifier extends ChangeNotifier {
-  CryptoAssetsData _cryptoAssetsData;
-  CryptoAssetsData get cryptoAssetsData => _cryptoAssetsData;
+  CryptoAssetsData? _cryptoAssetsData;
+  CryptoAssetsData? get cryptoAssetsData => _cryptoAssetsData;
 
-  double _percentChange;
+  double? _percentChange;
 
-  Color _isGain;
+  Color? _isGain;
 
-  double get percentChange => _percentChange;
-  Color get isGain => _isGain;
+  double? get percentChange => _percentChange;
+  Color? get isGain => _isGain;
 
-  void getPercentage({double open, double close}) {
+  void getPercentage({required double open, required double close}) {
     _percentChange = null;
 
     _percentChange = ((close - open) / open) * 100;

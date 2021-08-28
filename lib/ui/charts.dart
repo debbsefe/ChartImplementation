@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../model/crypto_asset_model.dart';
 import '../notifier.dart';
 import '../size_ext.dart';
-import '../model/crypto_asset_model.dart';
 
 class CandleChart extends StatefulWidget {
-  final Datum data;
-  final int index;
+  final Datum? data;
+  final int? index;
 
-  const CandleChart({Key key, this.data, this.index}) : super(key: key);
+  const CandleChart({Key? key, this.data, this.index}) : super(key: key);
 
   @override
   _CandleChartState createState() => _CandleChartState();
@@ -27,18 +28,18 @@ class _CandleChartState extends State<CandleChart> {
   bool callNotifier = false;
   @override
   Widget build(BuildContext context) {
-    Color isGain =
-        widget.data.open > widget.data.close ? Colors.red : Colors.green;
-    double percentChange = context.watch<AppNotifier>().percentChange;
-    Color gain = context.watch<AppNotifier>().isGain;
+    final Color isGain =
+        widget.data!.open! > widget.data!.close! ? Colors.red : Colors.green;
+    final double? percentChange = context.watch<AppNotifier>().percentChange;
+    final Color? gain = context.watch<AppNotifier>().isGain;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Theme.of(context).primaryColor,
         appBar: AppBar(
-          title: Text(widget.data.name),
+          title: Text(widget.data!.name!),
           centerTitle: true,
           elevation: 0,
-          actions: [
+          actions: const [
             Icon(Icons.star),
             SizedBox(
               width: 20,
@@ -58,8 +59,8 @@ class _CandleChartState extends State<CandleChart> {
                   Row(
                     children: [
                       Text(
-                        '\$${widget.data.price.toString()}',
-                        style: TextStyle(fontSize: 32),
+                        '\$${widget.data!.price.toString()}',
+                        style: const TextStyle(fontSize: 32),
                       ),
                       Icon(
                         Icons.info,
@@ -71,17 +72,18 @@ class _CandleChartState extends State<CandleChart> {
                     children: [
                       Text(
                         callNotifier && gain == Colors.red
-                            ? '${percentChange.toStringAsFixed(2)} %'
+                            ? '${percentChange!.toStringAsFixed(2)} %'
                             : callNotifier && gain == Colors.green
-                                ? '+${percentChange.toStringAsFixed(2)} %'
+                                ? '+${percentChange!.toStringAsFixed(2)} %'
                                 : isGain == Colors.green
-                                    ? '+${widget.data.percentChange24H.toString()} %'
-                                    : '${widget.data.percentChange24H.toString()} %',
+                                    ? '''+${widget.data!.percentChange24H.toString()} %'''
+                                    : '''
+${widget.data!.percentChange24H.toString()} %''',
                         style: TextStyle(
                           fontSize: 16,
                           color: callNotifier
                               ? gain
-                              : widget.data.open > widget.data.close
+                              : widget.data!.open! > widget.data!.close!
                                   ? Colors.red
                                   : Colors.green,
                         ),
@@ -100,7 +102,7 @@ class _CandleChartState extends State<CandleChart> {
             Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).scaffoldBackgroundColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(50),
                   topRight: Radius.circular(50),
                 ),
@@ -116,12 +118,12 @@ class _CandleChartState extends State<CandleChart> {
                           setState(() {});
                         },
                         child: Container(
-                            margin: EdgeInsets.only(right: 8),
-                            padding: EdgeInsets.all(8),
+                            margin: const EdgeInsets.only(right: 8),
+                            padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
                               color: isLine ? Colors.grey : Colors.transparent,
                             ),
-                            child: Text('Line Chart')),
+                            child: const Text('Line Chart')),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -129,19 +131,19 @@ class _CandleChartState extends State<CandleChart> {
                           setState(() {});
                         },
                         child: Container(
-                            margin: EdgeInsets.only(right: 8),
-                            padding: EdgeInsets.all(8),
+                            margin: const EdgeInsets.only(right: 8),
+                            padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
                               color: isLine ? Colors.transparent : Colors.grey,
                             ),
-                            child: Text('Candle Chart')),
+                            child: const Text('Candle Chart')),
                       ),
                     ],
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
+                  SizedBox(
                     height: context.height(0.4),
                     width: double.infinity,
                     child: CustomPaint(
@@ -154,18 +156,18 @@ class _CandleChartState extends State<CandleChart> {
                               timeSeries: callNotifier
                                   ? context
                                       .watch<AppNotifier>()
-                                      .cryptoAssetsData
-                                      .data[widget.index]
+                                      .cryptoAssetsData!
+                                      .data![widget.index!]
                                       .timeSeries
-                                  : widget.data.timeSeries)
+                                  : widget.data!.timeSeries)
                           : CryptoCandlePainter(
                               timeSeries: callNotifier
                                   ? context
                                       .watch<AppNotifier>()
-                                      .cryptoAssetsData
-                                      .data[widget.index]
+                                      .cryptoAssetsData!
+                                      .data![widget.index!]
                                       .timeSeries
-                                  : widget.data.timeSeries),
+                                  : widget.data!.timeSeries),
                     ),
                   ),
                   const SizedBox(
@@ -174,39 +176,40 @@ class _CandleChartState extends State<CandleChart> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: list.asMap().entries.map((entry) {
-                      var e = entry.value;
+                      final e = entry.value;
                       return GestureDetector(
                         onTap: () async {
                           index = entry.key;
                           callNotifier = true;
 
-                          CryptoAssetsData cryptoAssetsData = await context
-                              .read<AppNotifier>()
-                              .readJsonData(handleDateRange(e));
+                          final CryptoAssetsData cryptoAssetsData =
+                              await context
+                                  .read<AppNotifier>()
+                                  .readJsonData(handleDateRange(e));
 
-                          //the first open value in a timeseries
-                          double cryptoOpen = cryptoAssetsData
-                              .data[widget.index].timeSeries.first.open;
-                          //the last close value in a timeseries
-                          double cryptoClose = cryptoAssetsData
-                              .data[widget.index].timeSeries.last.close;
-
+                          //the first open value in a time series
+                          final double cryptoOpen = cryptoAssetsData
+                              .data![widget.index!].timeSeries!.first.open!;
+                          //the last close value in a time series
+                          final double cryptoClose = cryptoAssetsData
+                              .data![widget.index!].timeSeries!.last.close!;
+                          // ignore: use_build_context_synchronously
                           context.read<AppNotifier>().getPercentage(
                               open: cryptoOpen, close: cryptoClose);
 
                           setState(() {});
                         },
                         child: AnimatedContainer(
-                          duration: Duration(milliseconds: 100),
+                          duration: const Duration(milliseconds: 100),
                           curve: Curves.easeInOut,
-                          padding:
-                              EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 6, horizontal: 12),
                           decoration: BoxDecoration(
                               color: entry.key == index
                                   ? Colors.grey
                                   : Colors.transparent,
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(15))),
+                                  const BorderRadius.all(Radius.circular(15))),
                           child: Text(
                             e,
                             style: TextStyle(
@@ -241,28 +244,27 @@ String handleDateRange(String date) {
       return 'six_month_interval.json';
     case '1Y':
       return 'one_year_interval.json';
-      break;
     default:
       return 'assets/images/btc_ic.png';
   }
 }
 
 class CryptoChartPainter extends CustomPainter {
-  final List<TimeSery> timeSeries;
+  final List<TimeSeries>? timeSeries;
   final Color isGain;
   final Paint _paint;
-  final Color gain;
+  final Color? gain;
   final bool callNotifier;
-  final double strokeWidth;
+  final double? strokeWidth;
 
   CryptoChartPainter(
-      {@required this.timeSeries,
-      @required this.isGain,
-      @required this.gain,
+      {required this.timeSeries,
+      required this.isGain,
+      required this.gain,
       this.strokeWidth,
-      @required this.callNotifier})
+      required this.callNotifier})
       : _paint = Paint()
-          ..color = callNotifier ? gain : isGain
+          ..color = callNotifier ? gain! : isGain
           ..strokeWidth = strokeWidth ?? 2;
   @override
   void paint(Canvas canvas, Size size) {
@@ -270,12 +272,12 @@ class CryptoChartPainter extends CustomPainter {
       return;
     }
 
-    List<LineChart> charts = _generateChart(size);
+    final List<LineChart> charts = _generateChart(size);
     charts.asMap().entries.map((e) {
-      LineChart chart = e.value;
-      int currentIndex = e.key;
+      final LineChart chart = e.value;
+      final int currentIndex = e.key;
 
-      Offset p1 = Offset(
+      final Offset p1 = Offset(
         chart.centerX1,
 
         //normalize the y1 so that the lines join properly
@@ -283,7 +285,7 @@ class CryptoChartPainter extends CustomPainter {
             ? (size.height - chart.centerY1)
             : (size.height - charts[currentIndex - 1].centerY2),
       );
-      Offset p2 = Offset(
+      final Offset p2 = Offset(
         chart.centerX2,
         size.height - chart.centerY2,
       );
@@ -298,27 +300,30 @@ class CryptoChartPainter extends CustomPainter {
   }
 
   List<LineChart> _generateChart(Size availableSpace) {
-    //the greatest high in a timeseries
-    TimeSery cryptoHigh = timeSeries.reduce((a, b) => a.high > b.high ? a : b);
-    //the lowest low in a timeseries
-    TimeSery cryptoLow = timeSeries.reduce((a, b) => a.low < b.low ? a : b);
+    //the greatest high in a time series
+    final TimeSeries cryptoHigh =
+        timeSeries!.reduce((a, b) => a.high! > b.high! ? a : b);
+    //the lowest low in a time series
+    final TimeSeries cryptoLow =
+        timeSeries!.reduce((a, b) => a.low! < b.low! ? a : b);
 
-    //normalize available width space using the length of the timeseries
-    double pixelPerStick = availableSpace.width / (timeSeries.length + 1);
+    //normalize available width space using the length of the time series
+    final double pixelPerStick =
+        availableSpace.width / (timeSeries!.length + 1);
 
     //normalize available height space using crypto high and low
 
-    double pixelPerPrice =
-        availableSpace.height / (cryptoHigh.high - cryptoLow.low);
+    final double pixelPerPrice =
+        availableSpace.height / (cryptoHigh.high! - cryptoLow.low!);
 
     final List<LineChart> lineChart = [];
-    for (int i = 0; i < timeSeries.length; ++i) {
-      final TimeSery series = timeSeries[i];
+    for (int i = 0; i < timeSeries!.length; ++i) {
+      final TimeSeries series = timeSeries![i];
       lineChart.add(LineChart(
         centerX1: (i + 1) * pixelPerStick,
         centerX2: (i + 2) * pixelPerStick,
-        centerY1: (series.open - cryptoLow.low) * pixelPerPrice,
-        centerY2: (series.close - cryptoLow.low) * pixelPerPrice,
+        centerY1: (series.open! - cryptoLow.low!) * pixelPerPrice,
+        centerY2: (series.close! - cryptoLow.low!) * pixelPerPrice,
       ));
     }
     return lineChart;
@@ -332,22 +337,22 @@ class LineChart {
   final double centerY2;
 
   LineChart({
-    @required this.centerX1,
-    @required this.centerX2,
-    @required this.centerY1,
-    @required this.centerY2,
+    required this.centerX1,
+    required this.centerX2,
+    required this.centerY1,
+    required this.centerY2,
   });
 }
 
 class CryptoCandlePainter extends CustomPainter {
-  final List<TimeSery> timeSeries;
-  final double _candleWidth = 3.0;
-  final double _wickWidth = 1.0;
+  final List<TimeSeries>? timeSeries;
+  final double _candleWidth = 3;
+  final double _wickWidth = 1;
   final Paint _lossPaint;
   final Paint _gainPaint;
   final Paint _wickPaint;
 
-  CryptoCandlePainter({@required this.timeSeries})
+  CryptoCandlePainter({required this.timeSeries})
       : _gainPaint = Paint()..color = Colors.green,
         _lossPaint = Paint()..color = Colors.red,
         _wickPaint = Paint()..color = Colors.grey;
@@ -356,9 +361,9 @@ class CryptoCandlePainter extends CustomPainter {
     if (timeSeries == null) {
       return;
     }
-    List<CandleStick> candleSticks = _generateSticks(size);
+    final List<CandleStick> candleSticks = _generateSticks(size);
 
-    for (CandleStick candleStick in candleSticks) {
+    for (final CandleStick candleStick in candleSticks) {
       canvas.drawRect(
         Rect.fromLTRB(
           candleStick.center - (_wickWidth / 2),
@@ -369,6 +374,7 @@ class CryptoCandlePainter extends CustomPainter {
         _wickPaint,
       );
 
+      // ignore: cascade_invocations
       canvas.drawRect(
         Rect.fromLTRB(
           candleStick.center - (_candleWidth / 2),
@@ -382,27 +388,30 @@ class CryptoCandlePainter extends CustomPainter {
   }
 
   List<CandleStick> _generateSticks(Size availableSpace) {
-    //the greatest high in a timeseries
-    TimeSery cryptoHigh = timeSeries.reduce((a, b) => a.high > b.high ? a : b);
-    //the lowest low in a timeseries
-    TimeSery cryptoLow = timeSeries.reduce((a, b) => a.low < b.low ? a : b);
+    //the greatest high in a time series
+    final TimeSeries cryptoHigh =
+        timeSeries!.reduce((a, b) => a.high! > b.high! ? a : b);
+    //the lowest low in a time series
+    final TimeSeries cryptoLow =
+        timeSeries!.reduce((a, b) => a.low! < b.low! ? a : b);
 
-    double pixelPerStick = availableSpace.width / (timeSeries.length + 1);
+    final double pixelPerStick =
+        availableSpace.width / (timeSeries!.length + 1);
 
-    double pixelPerPrice =
-        availableSpace.height / (cryptoHigh.high - cryptoLow.low);
+    final double pixelPerPrice =
+        availableSpace.height / (cryptoHigh.high! - cryptoLow.low!);
 
     final List<CandleStick> candleSticks = [];
-    for (int i = 0; i < timeSeries.length; ++i) {
-      final TimeSery series = timeSeries[i];
+    for (int i = 0; i < timeSeries!.length; ++i) {
+      final TimeSeries series = timeSeries![i];
       candleSticks.add(
         CandleStick(
-            candleHigh: (series.open - cryptoLow.low) * pixelPerPrice,
-            candleLow: (series.close - cryptoLow.low) * pixelPerPrice,
-            candlePaint: series.open > series.close ? _lossPaint : _gainPaint,
+            candleHigh: (series.open! - cryptoLow.low!) * pixelPerPrice,
+            candleLow: (series.close! - cryptoLow.low!) * pixelPerPrice,
+            candlePaint: series.open! > series.close! ? _lossPaint : _gainPaint,
             center: (i + 1) * pixelPerStick,
-            wickHigh: (series.high - cryptoLow.low) * pixelPerPrice,
-            wickLow: (series.low - cryptoLow.low) * pixelPerPrice),
+            wickHigh: (series.high! - cryptoLow.low!) * pixelPerPrice,
+            wickLow: (series.low! - cryptoLow.low!) * pixelPerPrice),
       );
     }
     return candleSticks;
@@ -423,10 +432,10 @@ class CandleStick {
   final Paint candlePaint;
 
   CandleStick(
-      {@required this.center,
-      @required this.candlePaint,
-      @required this.wickHigh,
-      @required this.wickLow,
-      @required this.candleHigh,
-      @required this.candleLow});
+      {required this.center,
+      required this.candlePaint,
+      required this.wickHigh,
+      required this.wickLow,
+      required this.candleHigh,
+      required this.candleLow});
 }

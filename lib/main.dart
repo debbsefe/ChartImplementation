@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'ui/home.dart';
+
 import 'notifier.dart';
+import 'ui/home.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
